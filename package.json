@@ -1,0 +1,34 @@
+{
+  "name": "reverse-recruiting-app",
+  "version": "1.0.0",
+  "description": "A reverse recruiting platform where professionals find companies",
+  "main": "index.js",
+  "scripts": {
+    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install && cd ..",
+    "start": "npm run start-both",
+    "start-both": "concurrently \"cd backend && npm start\" \"cd frontend && npm start\"",
+    "start-backend": "cd backend && npm start",
+    "start-frontend": "cd frontend && npm start",
+    "build": "npm run build-frontend && npm run build-backend",
+    "build-frontend": "cd frontend && npm run build",
+    "build-backend": "cd backend && npm run build",
+    "lint": "npm run lint-frontend && npm run lint-backend",
+    "lint-frontend": "cd frontend && npm run lint",
+    "lint-backend": "cd backend && npm run lint",
+    "test": "npm run test-frontend && npm run test-backend",
+    "test-frontend": "cd frontend && npm test",
+    "test-backend": "cd backend && npm test"
+  },
+  "keywords": [
+    "recruiting",
+    "reverse",
+    "jobs",
+    "talent",
+    "platform"
+  ],
+  "author": "guaravsidharth-sid007",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
